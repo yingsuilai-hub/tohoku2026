@@ -1,0 +1,10 @@
+{
+  "name": "2026 東北鐵道慢旅行",
+  "short_name": "東北旅行",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f8f4ee",
+  "theme_color": "#1a1a2e",
+  "description": "青森・奧入瀨・TOHOKU EMOTION・仙台家庭慢旅行手冊",
+  "icons": []
+}

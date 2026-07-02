@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026 東北鐵道慢旅行 PWA Guide</title>
+  <meta name="theme-color" content="#1a1a2e">
+  <meta name="description" content="青森・奧入瀨・TOHOKU EMOTION・仙台家庭慢旅行手冊">
+  <link rel="manifest" href="manifest.webmanifest">
+  <style>
+    body {
+      margin:0; font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC","Segoe UI",sans-serif;
+      background:#f8f4ee; color:#1a1a2e; line-height:1.7;
+    }
+    header {
+      background:#1a1a2e; color:#f8f4ee; padding:36px 20px; text-align:center;
+    }
+    header h1 { margin:0; font-size:28px; letter-spacing:1px; }
+    header p { color:#c9b99a; margin:10px 0 0; }
+    nav {
+      position:sticky; top:0; z-index:10; display:flex; gap:8px; overflow:auto;
+      background:#ede8df; border-bottom:1px solid #d4c9b8; padding:10px;
+    }
+    nav a {
+      white-space:nowrap; text-decoration:none; color:#1a1a2e; background:white;
+      border:1px solid #d4c9b8; border-radius:999px; padding:6px 12px; font-size:14px;
+    }
+    .wrap { max-width:980px; margin:0 auto; padding:20px; }
+    .card { background:white; border:1px solid #d4c9b8; border-radius:12px; padding:18px; margin:16px 0; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; }
+    .badge { display:inline-block; background:#fff3e0; color:#8a4b00; padding:4px 10px; border-radius:999px; font-size:13px; }
+    .btn {
+      display:inline-block; margin:6px 6px 6px 0; padding:10px 14px; background:#1a1a2e; color:white;
+      border-radius:8px; text-decoration:none; font-weight:600;
+    }
+    .muted { color:#6b7c8d; font-size:14px; }
+    .day { border-left:5px solid #c0392b; }
+    footer { text-align:center; padding:30px; color:#6b7c8d; }
+    .install-box { background:#e8f4f0; border-color:#b8d8cc; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>2026 東北鐵道慢旅行</h1>
+  <p>Aomori・Oirase・TOHOKU EMOTION・Sendai｜Family Premium Guide</p>
+</header>
+
+<nav>
+  <a href="#home">首頁</a>
+  <a href="#overview">總覽</a>
+  <a href="#oirase">奧入瀨</a>
+  <a href="#emotion">TOHOKU EMOTION</a>
+  <a href="#share">分享與安裝</a>
+</nav>
+
+<main class="wrap" id="home">
+  <section class="card install-box">
+    <span class="badge">PWA 分享版</span>
+    <h2>家人手機打開網址後，可加入主畫面</h2>
+    <p>這是可上傳到 GitHub Pages / Cloudflare Pages 的分享版資料夾。上傳後只要分享網址，全家都能使用。</p>
+    <a class="btn" href="#oirase">查看奧入瀨章節</a>
+    <a class="btn" href="oirase_chapter.html">開啟奧入瀨獨立頁</a>
+  </section>
+
+  <section class="card" id="overview">
+    <h2>旅行總覽</h2>
+    <div class="grid">
+      <div class="card day"><strong>7/21</strong><br>桃園 → 青森，入住 ReLabo</div>
+      <div class="card day"><strong>7/22</strong><br>青森市區／弘前備案</div>
+      <div class="card day"><strong>7/23</strong><br>奧入瀨溪流 JR BUS 長輩版</div>
+      <div class="card day"><strong>7/24</strong><br>久慈 → TOHOKU EMOTION → 八戶</div>
+      <div class="card day"><strong>7/25–7/30</strong><br>仙台基地、松島／銀山／秋保慢遊</div>
+    </div>
+  </section>
+
+  <section class="card" id="oirase">
+    <h2>🍃 奧入瀨溪流 JR BUS Premium 章節</h2>
+    <p class="muted">以下為已完成的奧入瀨章節，可先給家人審閱。正式版會再整合全行程。</p>
+    <iframe src="oirase_chapter.html" style="width:100%;height:760px;border:1px solid #d4c9b8;border-radius:12px;background:white;"></iframe>
+  </section>
+
+  <section class="card" id="emotion">
+    <h2>🚂 TOHOKU EMOTION</h2>
+    <p>下一章將加入 TOHOKU EMOTION 專章：久慈報到、車廂、甜點 Buffet、看海方向、八戶轉乘。</p>
+  </section>
+
+  <section class="card" id="share">
+    <h2>如何分享</h2>
+    <ol>
+      <li>把整個資料夾上傳到 GitHub Pages 或 Cloudflare Pages。</li>
+      <li>取得公開網址後，傳給家人。</li>
+      <li>手機打開網址後，點「加入主畫面」即可像 App 一樣使用。</li>
+    </ol>
+    <p class="muted">目前版本可離線快取基本頁面，但 Google Maps 連結仍需網路。</p>
+  </section>
+</main>
+
+<footer>2026 東北鐵道慢旅行 V2 Premium｜Share Build</footer>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js'));
+}
+</script>
+</body>
+</html>
